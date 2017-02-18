@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class BonusesForm 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5390331582129940818L;
+    private static final long serialVersionUID = 5157312916479288699L;
     private Bonuses bonus;
     /** GETTER
      * The bonuses' wrapper

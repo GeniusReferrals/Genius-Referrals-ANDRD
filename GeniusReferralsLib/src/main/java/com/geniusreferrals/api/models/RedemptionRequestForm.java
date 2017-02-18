@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class RedemptionRequestForm 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 4710067144678116677L;
+    private static final long serialVersionUID = 5364431251179318456L;
     private RedemptionRequest redemptionRequest;
     /** GETTER
      * The redemption request's wrapper

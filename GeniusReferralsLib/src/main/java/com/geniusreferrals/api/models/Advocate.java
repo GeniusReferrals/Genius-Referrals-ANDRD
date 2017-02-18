@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class Advocate 
         extends java.util.Observable
         implements java.io.Serializable {
-    private static final long serialVersionUID = 5067680102028936297L;
+    private static final long serialVersionUID = 4792938735111501585L;
     private String name;
     private String lastname;
     private String email;

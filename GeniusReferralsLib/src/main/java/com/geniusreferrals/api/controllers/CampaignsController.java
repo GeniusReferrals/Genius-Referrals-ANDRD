@@ -57,7 +57,7 @@ public class CampaignsController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5318349299782028171L;
+            private static final long serialVersionUID = 5263733605741894697L;
             {
                     put( "account_slug", accountSlug );
                     put( "campaign_slug", campaignSlug );
@@ -67,7 +67,7 @@ public class CampaignsController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5430608902335791847L;
+            private static final long serialVersionUID = 4847282083182892713L;
             {
                     put( "user-agent", "APIMATIC 2.0" );
                     put( "accept", "application/json" );
@@ -158,17 +158,17 @@ public class CampaignsController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5169200092810071619L;
+            private static final long serialVersionUID = 5111539013517834052L;
             {
                     put( "account_slug", accountSlug );
             }});
 
         //process query parameters
         APIHelper.appendUrlWithQueryParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4867069574814465825L;
+            private static final long serialVersionUID = 5595079363972207126L;
             {
-                    put( "page", page );
-                    put( "limit", limit );
+                    put( "page", (null != page) ? page : 1 );
+                    put( "limit", (null != limit) ? limit : 10 );
                     put( "filter", filter );
                     put( "sort", sort );
             }});
@@ -177,7 +177,7 @@ public class CampaignsController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5698395330476822147L;
+            private static final long serialVersionUID = 5462257349863805909L;
             {
                     put( "user-agent", "APIMATIC 2.0" );
                     put( "accept", "application/json" );

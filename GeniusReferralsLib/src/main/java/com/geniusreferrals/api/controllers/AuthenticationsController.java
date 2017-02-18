@@ -41,7 +41,7 @@ public class AuthenticationsController extends BaseController {
      * Allow clients to test authentication on Genius Referrals platform.
      * @return    Returns the void response from the API call 
      */
-    public void getAuthenticationsAsync(
+    public void getAuthenticationAsync(
                 final APICallBack<DynamicResponse> callBack
     ) {
         //the base uri for api requests
@@ -55,7 +55,7 @@ public class AuthenticationsController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5311799287741341034L;
+            private static final long serialVersionUID = 5712256702503612319L;
             {
                     put( "user-agent", "APIMATIC 2.0" );
                     put( "accept", "application/json" );

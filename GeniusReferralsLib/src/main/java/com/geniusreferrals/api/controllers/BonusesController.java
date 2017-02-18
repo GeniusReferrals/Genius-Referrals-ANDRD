@@ -64,17 +64,17 @@ public class BonusesController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4831751779793128868L;
+            private static final long serialVersionUID = 4715842910699775540L;
             {
                     put( "account_slug", accountSlug );
             }});
 
         //process query parameters
         APIHelper.appendUrlWithQueryParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4789601014573498045L;
+            private static final long serialVersionUID = 5672298704606499001L;
             {
-                    put( "page", page );
-                    put( "limit", limit );
+                    put( "page", (null != page) ? page : 1 );
+                    put( "limit", (null != limit) ? limit : 10 );
                     put( "filter", filter );
                     put( "sort", sort );
             }});
@@ -83,7 +83,7 @@ public class BonusesController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4804867418827777896L;
+            private static final long serialVersionUID = 5343768372502142230L;
             {
                     put( "user-agent", "APIMATIC 2.0" );
                     put( "accept", "application/json" );
@@ -154,7 +154,7 @@ public class BonusesController extends BaseController {
      * @param    bonusesForm    Required parameter: The body of the request
      * @return    Returns the void response from the API call 
      */
-    public void postBonusesAsync(
+    public void postBonusAsync(
                 final String accountSlug,
                 final BonusesForm bonusesForm,
                 final APICallBack<DynamicResponse> callBack
@@ -168,7 +168,7 @@ public class BonusesController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5580066048146147342L;
+            private static final long serialVersionUID = 5591104891770771733L;
             {
                     put( "account_slug", accountSlug );
             }});
@@ -177,7 +177,7 @@ public class BonusesController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5264446241496118353L;
+            private static final long serialVersionUID = 5429140339658730646L;
             {
                     put( "user-agent", "APIMATIC 2.0" );
                     put( "accept", "application/json" );
@@ -250,7 +250,7 @@ public class BonusesController extends BaseController {
      * @param    paymentAmount    Required parameter: The payment amount the referrals has made. Required for a percentage based campaign.
      * @return    Returns the void response from the API call 
      */
-    public void getBonusesCheckupAsync(
+    public void getBonusCheckupAsync(
                 final String accountSlug,
                 final String advocateToken,
                 final String reference,
@@ -266,14 +266,14 @@ public class BonusesController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5296713082276425487L;
+            private static final long serialVersionUID = 5315551449456512061L;
             {
                     put( "account_slug", accountSlug );
             }});
 
         //process query parameters
         APIHelper.appendUrlWithQueryParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5502616108210296176L;
+            private static final long serialVersionUID = 4787350063039363657L;
             {
                     put( "advocate_token", advocateToken );
                     put( "reference", reference );
@@ -284,7 +284,7 @@ public class BonusesController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5314690808493583813L;
+            private static final long serialVersionUID = 5196937942186587347L;
             {
                     put( "user-agent", "APIMATIC 2.0" );
                     put( "X-Auth-Token", Configuration.xAuthToken );
@@ -354,9 +354,9 @@ public class BonusesController extends BaseController {
      * @param    bonusForm    Required parameter: The body of the request
      * @return    Returns the void response from the API call 
      */
-    public void postBonusesForceAsync(
+    public void postForceBonusAsync(
                 final String accountSlug,
-                final BonusesForm1 bonusForm,
+                final ForceBonusesForm bonusForm,
                 final APICallBack<DynamicResponse> callBack
     ) throws JsonProcessingException {
         //the base uri for api requests
@@ -368,7 +368,7 @@ public class BonusesController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5192193554296483616L;
+            private static final long serialVersionUID = 5424481198477722251L;
             {
                     put( "account_slug", accountSlug );
             }});
@@ -377,7 +377,7 @@ public class BonusesController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5673763789124401199L;
+            private static final long serialVersionUID = 5095440289850481663L;
             {
                     put( "user-agent", "APIMATIC 2.0" );
                     put( "accept", "application/json" );
@@ -448,7 +448,7 @@ public class BonusesController extends BaseController {
      * @param    traceId    Required parameter: The trace id
      * @return    Returns the void response from the API call 
      */
-    public void getBonusesTraceAsync(
+    public void getBonusTraceAsync(
                 final String accountSlug,
                 final int traceId,
                 final APICallBack<DynamicResponse> callBack
@@ -462,7 +462,7 @@ public class BonusesController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4768520628432225249L;
+            private static final long serialVersionUID = 5281174546074219933L;
             {
                     put( "account_slug", accountSlug );
                     put( "trace_id", traceId );
@@ -472,7 +472,7 @@ public class BonusesController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5343267673058069587L;
+            private static final long serialVersionUID = 4993570196098050206L;
             {
                     put( "user-agent", "APIMATIC 2.0" );
                     put( "accept", "application/json" );
@@ -557,7 +557,7 @@ public class BonusesController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5387454489260913289L;
+            private static final long serialVersionUID = 5710282574248186477L;
             {
                     put( "account_slug", accountSlug );
                     put( "bonus_id", bonusId );
@@ -567,7 +567,7 @@ public class BonusesController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 5716142031820815566L;
+            private static final long serialVersionUID = 5632893666632487080L;
             {
                     put( "user-agent", "APIMATIC 2.0" );
                     put( "X-Auth-Token", Configuration.xAuthToken );
@@ -649,7 +649,7 @@ public class BonusesController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 4934395719183181977L;
+            private static final long serialVersionUID = 5751016897542004670L;
             {
                     put( "account_slug", accountSlug );
                     put( "bonus_id", bonusId );
@@ -659,7 +659,7 @@ public class BonusesController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4727195885645546836L;
+            private static final long serialVersionUID = 5292858611680337619L;
             {
                     put( "user-agent", "APIMATIC 2.0" );
                     put( "accept", "application/json" );
@@ -733,7 +733,7 @@ public class BonusesController extends BaseController {
      * @param    sort    Optional parameter: Allowed fields: created. Use sort query-string parameter that contains a delimited set of property names. For each property name, sort in ascending order, and for each property prefixed with a dash ('-') sort in descending order. Separate each property name with a vertical bar ('\|'), which is consistent with the separation of the name\|value pairs in filtering, above. For example, if we want to retrieve users in order of their last name (ascending), first name (ascending) and hire date (descending), the request might look like this www.example.com/users?sort='last_name\|first_name\|-hire_date'
      * @return    Returns the void response from the API call 
      */
-    public void getBonusesTracesAsync(
+    public void getBonusTracesAsync(
                 final String accountSlug,
                 final Integer page,
                 final Integer limit,
@@ -750,17 +750,17 @@ public class BonusesController extends BaseController {
 
         //process template parameters
         APIHelper.appendUrlWithTemplateParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5363084505321579330L;
+            private static final long serialVersionUID = 5638146116024168602L;
             {
                     put( "account_slug", accountSlug );
             }});
 
         //process query parameters
         APIHelper.appendUrlWithQueryParameters(_queryBuilder, new HashMap<String, Object>() {
-            private static final long serialVersionUID = 5007309149282130741L;
+            private static final long serialVersionUID = 4829437942262358355L;
             {
-                    put( "page", page );
-                    put( "limit", limit );
+                    put( "page", (null != page) ? page : 1 );
+                    put( "limit", (null != limit) ? limit : 10 );
                     put( "filter", filter );
                     put( "sort", sort );
             }});
@@ -769,7 +769,7 @@ public class BonusesController extends BaseController {
 
         //load all headers for the outgoing API request
         Map<String, String> _headers = new HashMap<String, String>() {
-            private static final long serialVersionUID = 4709783091633361486L;
+            private static final long serialVersionUID = 5301361409963159235L;
             {
                     put( "user-agent", "APIMATIC 2.0" );
                     put( "accept", "application/json" );
