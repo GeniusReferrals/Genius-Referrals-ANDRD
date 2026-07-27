@@ -1,0 +1,7 @@
+services:
+  sdk:
+    build: .
+    working_dir: /sdk
+    environment:
+      - GR_API_TOKEN=${GR_API_TOKEN}
+      - GR_ACCOUNT_SLUG=${GR_ACCOUNT_SLUG:-test1000}
